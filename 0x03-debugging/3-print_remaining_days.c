@@ -12,7 +12,8 @@
 void print_remaining_days(int month, int day, int year)
 {
 	/* Check if it's a leap year */
-	int is_leap_year = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+	int is_leap_year = ((year % 4 == 0) && (year % 100 != 0)) 
+	|| (year % 400 == 0);
 
 	/* Check for invalid February 29 in non-leap years */
 	if (month == 2 && day == 60 && !is_leap_year)
