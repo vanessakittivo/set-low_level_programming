@@ -1,5 +1,8 @@
 #include "main.h"
 
+/* Helper label */
+int sqrt_helper(int n, int i);
+
 /**
  * _sqrt_recursion - natural square root using mirrors
  * @n: the number

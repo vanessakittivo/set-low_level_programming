@@ -1,5 +1,8 @@
 #include "main.h"
 
+/* Helper mirror label */
+int prime_helper(int n, int i);
+
 /**
  * is_prime_number - checks if prime using mirrors
  * @n: the number
