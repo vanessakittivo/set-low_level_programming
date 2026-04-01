@@ -4,6 +4,8 @@
 
 /**
  * main - adds positive numbers
+ * @argc: argument count
+ * @argv: argument vector
  *
  * Return: 0 on success, 1 on error
  */
@@ -11,15 +13,18 @@ int main(int argc, char *argv[])
 {
 	int i, sum = 0;
 
+	(void)argv;
+
 	if (argc == 1)
 	{
-	printf("0\n");
-	return (0);
+		printf("0\n");
+		return (0);
 	}
 
 	for (i = 1; i < argc; i++)
 	{
 		int j = 0;
+
 		while (argv[i][j] != '\0')
 	{
 		if (!isdigit(argv[i][j]))

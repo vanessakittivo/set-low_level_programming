@@ -2,6 +2,8 @@
 
 /**
  * main - prints all arguments received
+ * @argc: argument count
+ * @argv: argument vector
  *
  * Return: Always 0
  */

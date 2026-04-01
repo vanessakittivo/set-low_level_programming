@@ -3,6 +3,8 @@
 
 /**
  * main - multiplies two numbers
+ * @argc: argument count
+ * @argv: argument vector
  *
  * Return: 0 on success, 1 on error
  */
