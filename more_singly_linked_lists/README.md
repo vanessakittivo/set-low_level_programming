@@ -1,5 +1,3 @@
-# More Singly Linked Lists in C
-
 ## Description
 This project implements a singly linked list for integers with various operations.
 
@@ -14,6 +12,9 @@ This project implements a singly linked list for integers with various operation
 | `5-free_listint2.c` | Frees list and sets head to NULL |
 | `6-pop_listint.c` | Deletes head node and returns its data |
 | `7-get_nodeint.c` | Returns nth node |
+| `8-sum_listint.c` | Returns sum of all data |
+| `9-insert_nodeint.c` | Inserts node at given index |
+| `10-delete_nodeint.c` | Deletes node at given index |
 
 ## Compilation
 ```bash
