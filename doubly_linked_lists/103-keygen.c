@@ -1,19 +1,20 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
- * main - keygen for crackme5
+ * main
  * @argc: argument count
  * @argv: argument vector
  *
  * Return: 0 on success
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	char *username;
-	int len, i;
-	char key[20] = {0};
+	unsigned int sum = 0;
+	unsigned int key;
+	int i;
 
 	if (argc != 2)
 {
@@ -22,16 +23,13 @@ int main(int argc, char **argv)
 }
 
 	username = argv[1];
-	len = strlen(username);
 
-	for (i = 0; i < len; i++)
-{
-	key[i] = username[i] + (len - i);
-}
+	for (i = 0; username[i] != '\0'; i++)
+	sum += username[i];
 
-	key[len] = 'A' + (len % 26);
-	key[len + 1] = '\0';
+	key = (sum ^ 0x4f) & 0x3f;
 
-	printf("%s\n", key);
+	printf("%d\n", key);
+
 	return (0);
 }
