@@ -18,3 +18,6 @@ This project implements a doubly linked list data structure in C. Each node cont
 | `6-sum_dlistint.c` | Returns the sum of all data in a list |
 | `7-insert_dnodeint.c` | Inserts a new node at a given position |
 | `8-delete_dnodeint.c` | Deletes the node at a given index |
+| `100-password` | Password for crackme4 |
+| `102-result` | Largest palindrome product of two 3-digit numbers |
+| `103-keygen.c` | Keygen for crackme5 |
