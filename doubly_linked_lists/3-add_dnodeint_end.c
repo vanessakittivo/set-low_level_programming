@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * add_dnodeint_end
+ * add_dnodeint_end - adds a new node at the end of a dlistint_t list
  * @head: double pointer to the head
  * @n: integer to add
  *

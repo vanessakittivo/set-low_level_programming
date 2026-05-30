@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * sum_dlistint
+ * sum_dlistint - returns the sum of all the data (n) of a dlistint_t list
  * @head: pointer to head
  *
  * Return: sum or 0 if empty

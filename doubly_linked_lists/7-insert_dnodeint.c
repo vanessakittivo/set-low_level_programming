@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * insert_dnodeint_at_index
+ * insert_dnodeint_at_index - inserts a new node at a given position
  * @h: double pointer to head
  * @idx: index where to insert
  * @n: value to insert
