@@ -15,6 +15,10 @@ This project implements a singly linked list for integers with various operation
 | `8-sum_listint.c` | Returns sum of all data |
 | `9-insert_nodeint.c` | Inserts node at given index |
 | `10-delete_nodeint.c` | Deletes node at given index |
+| `100-reverse_listint.c` | Reverses a list (no malloc allowed) |
+| `101-print_listint_safe.c` | Prints a list safely (handles loops) |
+| `102-free_listint_safe.c` | Frees a list safely (handles loops) |
+| `103-find_loop.c` | Finds the loop in a linked list |
 
 ## Compilation
 ```bash
