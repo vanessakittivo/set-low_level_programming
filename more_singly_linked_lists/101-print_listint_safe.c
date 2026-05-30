@@ -3,25 +3,18 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - prints a listint_t linked list (handles loops)
- * @head: pointer to the head node
+ * get_loop_start - finds loop start node using Floyd's algorithm
+ * @head: pointer to head node
  *
- * Return: number of nodes in the list
+ * Return: pointer to loop start node, or NULL if no loop
  */
-size_t print_listint_safe(const listint_t *head)
+static const listint_t *get_loop_start(const listint_t *head)
 {
 	const listint_t *slow;
 	const listint_t *fast;
-	const listint_t *loop_start;
-	size_t count;
-
-	if (head == NULL)
-		return (0);
 
 	slow = head;
 	fast = head;
-	loop_start = NULL;
-
 	while (fast != NULL && fast->next != NULL)
 	{
 		slow = slow->next;
@@ -34,19 +27,40 @@ size_t print_listint_safe(const listint_t *head)
 				slow = slow->next;
 				fast = fast->next;
 			}
-			loop_start = slow;
-			break;
+			return (slow);
 		}
 	}
+	return (NULL);
+}
 
+/**
+ * print_listint_safe - prints a listint_t linked list (handles loops)
+ * @head: pointer to the head node
+ *
+ * Return: number of nodes in the list
+ */
+size_t print_listint_safe(const listint_t *head)
+{
+	const listint_t *loop_start;
+	size_t           count;
+	int              seen_loop;
+
+	if (head == NULL)
+		return (0);
+	loop_start = get_loop_start(head);
 	count = 0;
+	seen_loop = 0;
 	while (head != NULL)
 	{
 		if (head == loop_start)
 		{
-			printf("-> [%p] %d\n", (void *)head, head->n);
-			count++;
-			exit(98);
+			if (seen_loop)
+			{
+				printf("-> [%p] %d\n", (void *)head, head->n);
+				count++;
+				exit(98);
+			}
+			seen_loop = 1;
 		}
 		printf("[%p] %d\n", (void *)head, head->n);
 		count++;
